@@ -57,7 +57,7 @@ export default function Header() {
 
     <div className='relative'>
 
-        <div className={`absolute left-0 bg-black ${clicked && isSmall ? "opacity-70" : "opacity-0"} inset-0 z-2 w-full h-[100vh]`} style={{transition: "opacity 0.8s"}}>
+        <div className={`absolute left-0 bg-black ${clicked && isSmall ? "opacity-70" : "opacity-0"} inset-0  w-full h-[100vh]`} style={{transition: "opacity 0.8s"}}>
             
         </div>
 
@@ -69,9 +69,9 @@ export default function Header() {
             )
         }
         
-        <header className={`py-4 relative overflow-x-clip`} style={{transition: "all 0.8s"}}>
+        <header className={`py-5 md:py-7 relative overflow-x-clip`} style={{transition: "all 0.8s"}}>
 
-            <div className='max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8 '>
+            <div className='max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8'>
 
                 <div className='flex justify-between'>
                     

@@ -27,6 +27,10 @@ ul {
     list-style: none;
 }
 
+.oswald{
+    font-family: "Oswald", sans-serif;
+}
+
 button {
     cursor: pointer;
 }
@@ -242,3 +246,15 @@ p{
     animation: moveDot6 12s infinite linear;
 }
 
+.switch-hero{
+    position: relative;
+}
+
+.switch-hero::after{
+    position: absolute;
+    content: "";
+    background: #cd9d4b;
+    height: 2px;
+    bottom: -1px;
+    width: 100%;
+}

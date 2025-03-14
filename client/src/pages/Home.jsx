@@ -1,9 +1,10 @@
 import React from 'react'
+import HomeHero from '../components/HomeHero'
 
 export default function Home() {
   return (
-    <div className='h-[100vh] bg-black'>
-
+    <div>
+      <HomeHero/>
     </div>
   )
 }
