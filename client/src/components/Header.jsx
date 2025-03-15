@@ -5,13 +5,16 @@ import { Link } from 'react-router-dom'
 import {FaBars} from "react-icons/fa"
 import ShinyButton from './ShinyButton';
 import MiniAboutModal from './MiniAboutModal';
+import StickyHeader from './StickyHeader';
 
 export default function Header() {
     const [clicked, setClicked] = useState(false);
     const [transformMini, setTransformMini] = useState("500px");
     const [transformSide, setTransformSide] = useState("-700px");
     const [isSmall, setIsSmall] = useState(false);
-
+    const [scrolled, setScrolled] = useState(false);
+    const [transformSticky, setTransformSticky] = useState("0px");
+    
     const toggleSideMenu = () => {
         if (isSmall) {
             setClicked((prev) => !prev);
@@ -53,9 +56,48 @@ export default function Header() {
         }
     }, [clicked]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300){
+                setScrolled(true);
+            }
+            else{
+                setScrolled(false);
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+        
+    }, []);
+
+    useEffect(() => {
+        if (scrolled){
+            setTransformSticky("-100px");
+        }
+        else{
+            setTransformSticky("0px")
+        }
+    }, [scrolled]);
+
+    // useEffect(() => {
+    //     if (clicked){
+    //         document.body.style.overflow = "hidden";
+    //         console.log(2);
+    //     }
+    //     else{
+    //         document.body.style.overflow = "auto";
+    //     }
+
+    //     return () => {
+    //         document.body.style.overflow = "auto";
+    //     };
+    // }, [clicked]);
+
   return (
 
-    <div className='relative'>
+    <div className="relative">
 
         <div className={`absolute left-0 bg-black ${clicked && isSmall ? "opacity-70" : "opacity-0"} inset-0  w-full h-[100vh]`} style={{transition: "opacity 0.8s"}}>
             
@@ -63,13 +105,13 @@ export default function Header() {
 
         {isSmall &&
             (
-            <div className={`absolute top-0 w-full left-0 z-4`} style={{transform:`translateX(${transformSide})`, transition:"all 0.8s"}}>
+            <div className={`fixed top-0 w-full left-0 z-4`} style={{transform:`translateX(${transformSide})`, transition:"all 0.8s"}}>
                 <Sidemenu handleClick={() => {toggleSideMenu()}}/>
             </div>
             )
         }
-        
-        <header className={`py-5 md:py-7 relative overflow-x-clip`} style={{transition: "all 0.8s"}}>
+
+        <header className={`py-5 md:py-7 relative overflow-x-clip`}>
 
             <div className='max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8'>
 
@@ -131,6 +173,8 @@ export default function Header() {
             }
 
         </header>
+
+        <StickyHeader scrolled={scrolled}/>
 
     </div>
   )
