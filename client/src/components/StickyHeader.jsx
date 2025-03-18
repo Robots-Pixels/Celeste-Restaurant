@@ -9,7 +9,7 @@ export default function StickyHeader({scrolled}) {
     const [transformMini, setTransformMini] = useState("500px");
     const [transformSide, setTransformSide] = useState("-700px");
     const [isSmall, setIsSmall] = useState(false);
-    const [transformSticky, setTransformSticky] = useState("-100px");
+    const [transformSticky, setTransformSticky] = useState("-200px");
 
     const toggleSideMenu = () => {
         if (isSmall) {
@@ -57,12 +57,12 @@ export default function StickyHeader({scrolled}) {
             setTransformSticky("0px");
         }
         else{
-            setTransformSticky("-100px")
+            setTransformSticky("-200px")
         }
     }, [scrolled]);
 
   return (
-    <header className={`py-5 md:py-7 fixed top-0 left-0 w-full z-50 bg-[#161616] overflow-x-clip shadow-[#161616] shadow-xs`} style={{transition: "transform 0.3s", transform: `translateY(${transformSticky})`}}>
+    <header className={`py-5 md:py-7 fixed top-0 left-0 w-full z-50 bg-[#161616] overflow-x-clip shadow-[#252020] shadow`} style={{transition: "transform 0.3s", transform: `translateY(${transformSticky})`}}>
 
         <div className='max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8'>
 
