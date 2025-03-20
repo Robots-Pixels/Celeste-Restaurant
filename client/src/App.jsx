@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {BrowserRouter, Routes, Route} from "react-router-dom"; 
 
 import './App.css'
@@ -6,11 +6,10 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Reservation from './pages/Reservation.jsx';
 import Header from './components/Header.jsx';
-
-
+import Menu from './pages/Menu.jsx';
 
 function App() {
-
+      
   return (
     <BrowserRouter>
     
@@ -20,6 +19,7 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='about' element={<About/>} />
         <Route path='/reservation' element={<Reservation/>} />
+        <Route path='/menu' element={<Menu/>} />
       </Routes>
 
     </BrowserRouter>

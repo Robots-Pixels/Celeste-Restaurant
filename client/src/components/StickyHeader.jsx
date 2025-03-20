@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {FaBars} from "react-icons/fa"
 import ShinyButton from './ShinyButton';
 import MiniAboutModal from './MiniAboutModal';
+import Sidemenu from './Sidemenu';
 export default function StickyHeader({scrolled}) {
 
     const [clicked, setClicked] = useState(false);
@@ -62,7 +63,16 @@ export default function StickyHeader({scrolled}) {
     }, [scrolled]);
 
   return (
-    <header className={`py-5 md:py-7 fixed top-0 left-0 w-full z-50 bg-[#161616] overflow-x-clip shadow-[#252020] shadow`} style={{transition: "transform 0.3s", transform: `translateY(${transformSticky})`}}>
+    <div className={`py-5 md:py-7 fixed top-0 left-0 w-full z-50 bg-[#161616] overflow-x-clip shadow-[#252020] shadow`} style={{transition: "transform 0.3s", transform: `translateY(${transformSticky})`}}>
+
+
+        {isSmall &&
+            (
+            <div className={`fixed top-0 w-full left-0 z-4`} style={{transform:`translateX(${transformSide})`, transition:"all 0.8s"}}>
+                <Sidemenu handleClick={() => {toggleSideMenu()}}/>
+            </div>
+            )
+        }
 
         <div className='max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8'>
 
@@ -80,6 +90,10 @@ export default function StickyHeader({scrolled}) {
 
                         <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
                             <Link to={"/about"}>ABOUT</Link>
+                        </div>
+
+                        <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
+                            <Link to={"/menu"}>MENU</Link>
                         </div>
 
                         <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
@@ -123,6 +137,6 @@ export default function StickyHeader({scrolled}) {
             </div>
         }
 
-    </header>
+    </div>
   )
 }

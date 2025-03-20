@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Sidemenu from './Sidemenu'
 import { Link } from 'react-router-dom'
-
 import {FaBars} from "react-icons/fa"
 import ShinyButton from './ShinyButton';
 import MiniAboutModal from './MiniAboutModal';
@@ -81,22 +80,7 @@ export default function Header() {
         }
     }, [scrolled]);
 
-    // useEffect(() => {
-    //     if (clicked){
-    //         document.body.style.overflow = "hidden";
-    //         console.log(2);
-    //     }
-    //     else{
-    //         document.body.style.overflow = "auto";
-    //     }
-
-    //     return () => {
-    //         document.body.style.overflow = "auto";
-    //     };
-    // }, [clicked]);
-
   return (
-
     <div className="relative">
 
         <div className={`absolute left-0 bg-black ${clicked && isSmall ? "opacity-70" : "opacity-0"} inset-0  w-full h-[100vh]`} style={{transition: "opacity 0.8s"}}>
@@ -133,6 +117,10 @@ export default function Header() {
 
                             <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
                                 <Link to={"/menu"}>MENU</Link>
+                            </div>
+
+                            <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
+                                <Link to={"/gallery"}>GALLERY</Link>
                             </div>
 
                             <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
