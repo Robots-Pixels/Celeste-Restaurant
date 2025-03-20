@@ -37,6 +37,10 @@ export default function Sidemenu({handleClick}) {
                     </div>
 
                     <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
+                        <Link to={"/gallery"}>GALLERY</Link>
+                    </div>
+
+                    <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
                         <Link to={"/CONTACT"}>CONTACT</Link>
                     </div>
                 </div>

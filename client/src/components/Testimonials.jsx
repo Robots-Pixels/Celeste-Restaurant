@@ -3,7 +3,7 @@ import React from 'react'
 export default function Testimonials() {
   return (
 
-      <div className='relative z-2 mb-100'>
+      <div className='relative z-2'>
 
       <section className="w-full bg-[#2b2b2b] z-1">
           

@@ -95,9 +95,10 @@ export default function Menu() {
       ])
 
   return (
+
     <div className="flex flex-col">
 
-        <Hero image={"https://images.pexels.com/photos/31125216/pexels-photo-31125216.jpeg"} title={"MENU"} subtitle={"Need food and a good place to eat? Welcome to our humble place where you can eat good food peacefully."}/>
+        <Hero image={"https://images.pexels.com/photos/1833349/pexels-photo-1833349.jpeg"} title={"MENU"} subtitle={"Explore our menu and experience gourmet cuisine — carefully prepared dishes that delight every palate."}/>
         
         <section className='z-1 bg-center bg-cover py-30' style={{backgroundImage: `url(${bgBlack})`}}>
 

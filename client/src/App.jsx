@@ -7,6 +7,7 @@ import About from './pages/About.jsx';
 import Reservation from './pages/Reservation.jsx';
 import Header from './components/Header.jsx';
 import Menu from './pages/Menu.jsx';
+import Gallery from './pages/Gallery.jsx';
 
 function App() {
       
@@ -20,6 +21,7 @@ function App() {
         <Route path='about' element={<About/>} />
         <Route path='/reservation' element={<Reservation/>} />
         <Route path='/menu' element={<Menu/>} />
+        <Route path='/gallery' element={<Gallery/>} />
       </Routes>
 
     </BrowserRouter>

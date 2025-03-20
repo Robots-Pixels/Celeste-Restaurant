@@ -97,7 +97,7 @@ export default function StickyHeader({scrolled}) {
                         </div>
 
                         <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
-                            <Link to={"/menu"}>MENU</Link>
+                            <Link to={"/gallery"}>GALLERY</Link>
                         </div>
 
                         <div className='h-full flex items-center justify-center cursor-pointer nav-link'>
