@@ -8,6 +8,7 @@ import Reservation from './pages/Reservation.jsx';
 import Header from './components/Header.jsx';
 import Menu from './pages/Menu.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Contact from './pages/Contact.jsx';
 
 function App() {
       
@@ -22,6 +23,7 @@ function App() {
         <Route path='/reservation' element={<Reservation/>} />
         <Route path='/menu' element={<Menu/>} />
         <Route path='/gallery' element={<Gallery/>} />
+        <Route path='/contact' element={<Contact/>} />
       </Routes>
 
     </BrowserRouter>
