@@ -1,11 +1,21 @@
 import React from 'react'
 import HomeHero from '../components/HomeHero'
 import { FaPhone, FaMapPin, FaClock } from 'react-icons/fa'
+import SectionTitle from '../components/SectionTitle'
+import CoreFeatures from '../components/CoreFeatures'
+import About from './About'
+import Story from '../components/Story'
+import Signature from '../components/Signature'
+import MiniMenu from '../components/MiniMenu'
+import Testimonials from '../components/Testimonials'
+import Numbers from '../components/Numbers'
+import BookingCard from '../components/BookingCard'
 
 export default function Home() {
   return (
     <div className=''>
       <HomeHero/>
+
       <section className='flex flex-col bg-[#161616] relative py-12'>
 
       <div>
@@ -123,6 +133,37 @@ export default function Home() {
       </div>
 
       </section>
+
+      <SectionTitle bg={"https://images.pexels.com/photos/9566086/pexels-photo-9566086.jpeg"} title={"WHO ARE WE ?"}/>
+
+      <Story/>
+
+      <CoreFeatures/>
+
+      <SectionTitle bg={"https://images.pexels.com/photos/359993/pexels-photo-359993.jpeg"} />
+
+      <Signature/>
+
+      <SectionTitle bg={"https://images.pexels.com/photos/359993/pexels-photo-359993.jpeg"} />
+
+      <MiniMenu/>
+
+      <SectionTitle bg={"https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg"} title={"TESTIMONIALS"}/>
+
+      <div className='flex flex-col relative'>
+
+          <Testimonials/>
+            
+          <Numbers/>
+
+      </div>
+
+      <SectionTitle bg={"https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg"} title={"RESERVATION"}/>
+
+      <BookingCard/>
+
+      <div className='mb-20'/>
+
     </div>
   )
 }
