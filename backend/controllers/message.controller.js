@@ -5,7 +5,7 @@ export const newMessage = async(req, res) => {
     try {
         const newMessage = new Message({name, email, message});
         await newMessage.save();
-        res.status(200).send(
+        res.status(200).json(
             {
                 success: true,
                 message: "Message sent successfully",

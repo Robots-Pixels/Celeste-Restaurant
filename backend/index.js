@@ -3,6 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import messageRoute from "./routes/message.route.js";
+import bookingRoute from "./routes/booking.route.js";
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const app = new express();
 app.use(express.json());
 app.use(cors({origin: "*"}));
 app.use("/api/message/", messageRoute);
+app.use("/api/reservation/", bookingRoute);
 
 mongoose
     .connect((process.env.MONGO))

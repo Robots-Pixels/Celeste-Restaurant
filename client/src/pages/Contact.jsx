@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FaEnvelope, FaPen } from 'react-icons/fa'
 import ShinyButton from '../components/ShinyButton'
-import MapComponent from '../components/MapComponent'
 import { useNavigate } from 'react-router-dom'
 
 export default function Contact() {
@@ -73,7 +72,7 @@ export default function Contact() {
                         <div className='flex flex-col gap-3 items-center text-center md:text-start md:items-start'>
 
                             <div className='flex flex-col gap-2 items-center md:items-start'>
-                                <img className='w-10 h-10' src={"/public/contact.svg"}/>
+                                <img className='w-10 h-10' src={"/contact.svg"}/>
                                 <h3 className='text-xl'>CONTACT US</h3>
                             </div>
 
@@ -87,7 +86,7 @@ export default function Contact() {
                         <div className='flex flex-col gap-3 items-center text-center md:text-start md:items-start'>
 
                             <div className='flex flex-col gap-2 items-center md:items-start'>
-                                <img className='w-10 h-10' src={"/public/location.svg"}/>
+                                <img className='w-10 h-10' src={"/location.svg"}/>
                                 <h3 className='text-xl'>OUR ADRESS</h3>
                             </div>
 
@@ -100,7 +99,7 @@ export default function Contact() {
                         <div className='flex flex-col gap-3 items-center text-center md:text-start md:items-start'>
 
                             <div className='flex flex-col gap-2 items-center md:items-start'>
-                                <img className='w-10 h-10' src={"/public/hourglass.svg"}/>
+                                <img className='w-10 h-10' src={"/hourglass.svg"}/>
                                 <h3 className='text-xl'>OPEN TIME</h3>
                             </div>
 
@@ -112,6 +111,7 @@ export default function Contact() {
                     </div>
                     
                     <div className='min-h-[300px] flex-1'>
+
                         <form className='w-full h-full'
                         onSubmit={handleSubmit}>
                             <div className='flex flex-col gap-5 w-full h-full'>
@@ -155,8 +155,8 @@ export default function Contact() {
                                 </button>
 
                             </div>
-
                         </form>
+                        
                     </div>
 
                 </div>
@@ -166,8 +166,8 @@ export default function Contact() {
         </section>
 
 
-        <section className='z-1 -mt-40'>
-            <MapComponent/>
+        <section className='relative z-1 -mt-40'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15860.108139259333!2d2.6090053999999996!3d6.390513100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103ca940e39179ef%3A0xa3bf2162dc5655a0!2sRESTAURANT%20PETRO%20PALACE!5e0!3m2!1sfr!2sbj!4v1742478461905!5m2!1sfr!2sbj" width="100%" height="450"  allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
 

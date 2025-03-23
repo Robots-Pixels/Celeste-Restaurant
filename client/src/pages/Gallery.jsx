@@ -6,12 +6,12 @@ import Testimonials from '../components/Testimonials'
 export default function Gallery() {
 
     const [gallery, setGallery] = useState([
-        "/public/gallery1.jpeg",
-        "/public/gallery6.jpeg",
-        "/public/gallery2.jpeg",
-        "/public/gallery3.jpeg",
-        "/public/gallery4.jpeg",
-        "/public/gallery5.jpeg",
+        "/gallery1.jpeg",
+        "/gallery6.jpeg",
+        "/gallery2.jpeg",
+        "/gallery3.jpeg",
+        "/gallery4.jpeg",
+        "/gallery5.jpeg",
     ])
 
   return (
