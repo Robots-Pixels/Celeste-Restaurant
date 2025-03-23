@@ -64,7 +64,7 @@ select option {
 /* ====== HEADER ====== */
 
 .logo {
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif; */
 }
 
 .cta-link {
@@ -252,6 +252,22 @@ select option {
 }
 .dot6 {
     animation: moveDot6 12s infinite linear;
+}
+
+.footer-section{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.footer-section::after{
+    position: absolute;
+    left:0px;
+    bottom: -10px;
+    content: "";
+    width: 70%;
+    height: 2px;
+    border-radius: 100px;
+    background: #cd9d4b;
 }
 
 @media (max-width: 72rem) {

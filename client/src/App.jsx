@@ -9,6 +9,7 @@ import Header from './components/Header.jsx';
 import Menu from './pages/Menu.jsx';
 import Gallery from './pages/Gallery.jsx';
 import Contact from './pages/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
       
@@ -25,6 +26,8 @@ function App() {
         <Route path='/gallery' element={<Gallery/>} />
         <Route path='/contact' element={<Contact/>} />
       </Routes>
+
+      <Footer/>
 
     </BrowserRouter>
   )
